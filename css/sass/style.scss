@@ -1,0 +1,28 @@
+//  import
+//  add CSS modules as needed
+
+@import 'reset';
+
+//  Variables
+
+$pc: #ffffff;
+$sc: #000000;
+$desktop: 1024px;
+$smallDesktop: 960px;
+$tablet: 728px;
+$largePhone: 568px;
+$mediumPhone: 375px;
+$smallPhone: 320px;
+
+//  general
+
+body{
+	font-size: 15px;
+	color: $tc;
+	background: $pc;
+	line-height: 1.7em;
+	padding: 0;
+	margin: 0;
+	font-family: $bf;
+	position: relative;
+	}
