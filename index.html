@@ -3,14 +3,38 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <title>La Fustera - A dream house on the Mediterranean</title>
+        <title>Calculator</title>
         <link rel="shortcut icon" href="img/icon.png" />
         <link rel="icon" type="image/png" href="icon.png" />
         <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
     	<link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
     <body>
+        <main>
+            <section id="output">
+                <div id="data"></div>
+            </section>
+            <section id="input">
+                <div data-calc="7" class="key" id="key-7">7</div>
+                <div data-calc="8" class="key" id="key-8">8</div>
+                <div data-calc="9" class="key" id="key-9">9</div>
+                <div data-calc="plus" class="key" id="key-plus">+</div>
+                <div data-calc="4" class="key" id="key-4">4</div>
+                <div data-calc="5" class="key" id="key-5">5</div>
+                <div data-calc="6" class="key" id="key-6">6</div>
+                <div data-calc="minus" class="key" id="key-minus">-</div>
+                <div data-calc="1" class="key" id="key-1">1</div>
+                <div data-calc="2" class="key" id="key-2">2</div>
+                <div data-calc="3" class="key" id="key-3">3</div>
+                <div data-calc="times" class="key" id="key-times">*</div>
+                <div data-calc="0" class="key" id="key-0">0</div>
+                <div data-calc="point" class="key" id="key-point">.</div>
+                <div data-calc="equals" class="key" id="key-eq">=</div>
+                <div data-calc="divide" class="key" id="key-divide">/</div>
+            </section>
+        </main>
         <script type="text/javascript" src="scripts/scripts.js"></script>
     </body>
 </html>

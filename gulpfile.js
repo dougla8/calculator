@@ -34,7 +34,7 @@ gulp.task('styles', function() {
 //  modernizr
 
 gulp.task('modernizr', function() {
-    gulp.src('./scripts/maximised/*.js')
+    gulp.src('./scripts/modules/*.js')
         .pipe(modernizr({
             options: [
                 "setClasses",
@@ -44,13 +44,13 @@ gulp.task('modernizr', function() {
         		"fnBind"
             ]
         }))
-        .pipe(gulp.dest("./scripts/maximised/"))
+        .pipe(gulp.dest("./scripts/modules/"))
 });
 
 //  concat js files
 
 gulp.task('scripts', function() {
-    return gulp.src('./scripts/maximised/*.js')
+    return gulp.src('./scripts/modules/*.js')
         .pipe(concat('./scripts.js'))
         .pipe(gulp.dest('./scripts/'));
 });
@@ -69,7 +69,7 @@ gulp.task('webserver', function() {
     gulp.src('')
         .pipe(webserver({
             livereload: true,
-            directoryListing: true,
+            directoryListing: false,
             open: true
     }));
 });
@@ -78,6 +78,6 @@ gulp.task('webserver', function() {
 
 gulp.task('default', ['webserver', 'watch']);
 gulp.task('watch', function() {
-    gulp.watch('./scripts/maximised/*.js', ['scripts']);
+    gulp.watch('./scripts/modules/*.js', ['scripts']);
     gulp.watch('css/sass/*.scss',['styles']);
 })

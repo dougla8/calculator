@@ -5,24 +5,84 @@
 
 //  Variables
 
-$pc: #ffffff;
-$sc: #000000;
-$desktop: 1024px;
-$smallDesktop: 960px;
-$tablet: 728px;
-$largePhone: 568px;
-$mediumPhone: 375px;
-$smallPhone: 320px;
+$pc: #202020;
+$sc: #f2f2f2;
+$tc: #c3c4c6;
+$qc: #fa8e12;
+$mw: 414px;
 
 //  general
 
+/* latin */
+@font-face {
+	font-family: 'Droid Sans Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Droid Sans Mono Regular'),
+	local('DroidSansMono-Regular'),
+	url(http://fonts.gstatic.com/s/droidsansmono/v9/6NUO8FuJNQ2MbkrZ5-J8lKFrp7pRef2rUGIW9g.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body{
-	font-size: 15px;
-	color: $tc;
-	background: $pc;
-	line-height: 1.7em;
+	font-family: 'Droid Sans Mono';
+	font-size: 14px;
+	color: $pc;
+	background: $sc;
+	line-height: 1.8em;
 	padding: 0;
 	margin: 0;
-	font-family: $bf;
 	position: relative;
 	}
+
+main{
+	max-width: $mw;
+	margin: 20px auto;
+	border: solid 1px $pc;
+	border-radius: 5px;
+	overflow: hidden;
+	section#output{
+		min-height: 175px;
+		background: $pc;
+		overflow: hidden;
+		position: relative;
+		#data{
+			color: $tc;
+			font-size: 45px;
+			text-align: right;
+			padding: 10px;
+			margin: 0;
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+		}
+	}
+	section#input{
+		max-width: $mw;
+		.key{
+			width: calc(100% / 4 - 1px);
+			height: 100px;
+			overflow: hidden;
+			float: left;
+			border-top: solid 1px $pc;
+			border-left: solid 1px $pc;
+			cursor: pointer;
+			background: $tc;
+			text-align: center;
+			line-height: 7em;
+			transition: all 0.4s;
+		}
+		#key-plus, #key-minus, #key-divide, #key-times, #key-eq{
+			background: $qc;
+		}
+		#key-7, #key-4, #key-1, #key-0{
+			border-left: 0;
+			width: calc(100% / 4);
+		}
+	}
+	section#input:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
