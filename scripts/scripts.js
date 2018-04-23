@@ -78,5 +78,4 @@ function btnPress(e) {
         default:
         break;
     }
-
 }
