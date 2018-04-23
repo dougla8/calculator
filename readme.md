@@ -2,6 +2,8 @@
 
 JS calculator for basic math.
 
+Demo <a href="https://codepen.io/Rueb/pen/QryMom">here</a>.
+
 
 ```
 
